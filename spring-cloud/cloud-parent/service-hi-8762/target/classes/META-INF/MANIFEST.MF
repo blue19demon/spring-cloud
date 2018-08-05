@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: service-hi-8762
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: com.zimadai
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/cloud-parent/service-hi-8762
+Created-By: Maven Integration for Eclipse
+

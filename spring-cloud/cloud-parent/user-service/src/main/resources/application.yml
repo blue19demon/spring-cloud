@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+spring: 
+  application: 
+    name: user-service
+  datasource:
+     name: test
+     url: jdbc:mysql://127.0.0.1:3306/wechat?useUnicode=true&characterEncoding=utf8
+     username: root
+     password: 123456
+     driver-class-name: com.mysql.jdbc.Driver
+eureka: 
+  client:
+    serviceUrl: 
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddr}:${server.port}
+zuul:
+  routes:
+    api-user:
+      path: /api-user/**
+      serviceId: user-service
+    api-movie:
+      path: /api-movie/**
+      serviceId: movie-service      
+
+#mybatis config
+mybatis:
+  typeAliasesPackage: com.zimadai.cloud.bean
+  mapperLocations: classpath:mappers/*.xml
