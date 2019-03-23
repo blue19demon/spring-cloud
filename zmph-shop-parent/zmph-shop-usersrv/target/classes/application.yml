@@ -1,0 +1,24 @@
+server:
+  port: 7777
+
+spring: 
+  application: 
+    name: zmph-shop-usersrv
+  datasource:
+     name: test
+     url: jdbc:mysql://127.0.0.1:3306/wechat?useUnicode=true&characterEncoding=utf8
+     username: root
+     password: 123456
+     driver-class-name: com.mysql.jdbc.Driver
+eureka: 
+  client:
+    serviceUrl: 
+      defaultZone: http://localhost:8888/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddr}:${server.port}   
+
+#mybatis config
+mybatis:
+  typeAliasesPackage: org.zmph.shop.usersrv.bean
+  mapperLocations: classpath:mappers/*.xml
