@@ -22,3 +22,10 @@ eureka:
 mybatis:
   typeAliasesPackage: org.zmph.shop.usersrv.bean
   mapperLocations: classpath:mappers/*.xml
+
+#pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
