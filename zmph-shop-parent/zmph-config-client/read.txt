@@ -1,0 +1,10 @@
+分布式配置中心
+1.启动注册中心
+java -jar zmph-shop-eurake-0.0.1-SNAPSHOT.jar
+1.启动server
+java -jar zmph-config-server-0.0.1-SNAPSHOT.jar
+1.启动client
+java -jar zmph-config-client-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+java -jar zmph-config-client-0.0.1-SNAPSHOT.jar --spring.profiles.active=uat
+java -jar zmph-config-client-0.0.1-SNAPSHOT.jar --spring.profiles.active=sit
+java -jar zmph-config-client-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod

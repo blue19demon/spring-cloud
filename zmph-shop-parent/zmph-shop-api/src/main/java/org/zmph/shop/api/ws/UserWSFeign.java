@@ -1,11 +1,10 @@
 package org.zmph.shop.api.ws;
 
-import java.util.List;
-
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.zmph.shop.api.common.PageResult;
 import org.zmph.shop.api.response.UserResponse;
 @FeignClient(value = "zmph-shop-usersrv")
 @RequestMapping(value = "/api-user")
@@ -14,7 +13,7 @@ public interface UserWSFeign {
 	public int deleteUser(@RequestParam(value = "id") Integer id);
 
 	@RequestMapping(value = "/user/findUserByPage", method = RequestMethod.GET)
-	public List<UserResponse> findUserByPage(@RequestParam(value = "pageNow")Integer pageNow,
+	public PageResult<UserResponse> findUserByPage(@RequestParam(value = "pageNow")Integer pageNow,
 			@RequestParam(value = "pageSize")Integer pageSize);
 	
 	@RequestMapping(value = "/user/add", method = RequestMethod.GET)

@@ -1,0 +1,22 @@
+server:
+  port: 7001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/ 
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    
+spring:
+  cloud:
+    config:
+      server: 
+        native:
+          search-locations: file:E:/GitHub/spring-cloud/zmph-shop-parent/properties # classpath:properties/搜索src/main/resource 下的properties文件夹下的文件
+  application:
+    name: zmph-config-server
+  profiles:
+    active: native  # 配置使用本地储存
+  

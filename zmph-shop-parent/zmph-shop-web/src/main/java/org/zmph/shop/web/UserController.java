@@ -1,12 +1,11 @@
 package org.zmph.shop.web;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.zmph.shop.api.common.PageResult;
 import org.zmph.shop.api.response.UserResponse;
 import org.zmph.shop.api.ws.UserWSFeign;
 
@@ -23,7 +22,7 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/user/findUserByPage", method = RequestMethod.GET)
-	public List<UserResponse> findUserByPage(Integer pageNow, Integer pageSize) {
+	public PageResult<UserResponse> findUserByPage(Integer pageNow, Integer pageSize) {
 		return userWSFeign.findUserByPage(pageNow, pageSize);
 	}
 

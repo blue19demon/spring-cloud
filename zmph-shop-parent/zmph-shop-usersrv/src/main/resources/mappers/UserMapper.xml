@@ -97,4 +97,11 @@
 			t_user
 		LIMIT #{start},#{pageSize}
   </select>
+  
+   <select id="getTotal" resultType="java.lang.Integer" >
+		  SELECT
+			COUNT(*)
+		FROM
+			t_user
+  </select>
 </mapper>

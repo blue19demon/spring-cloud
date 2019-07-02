@@ -22,4 +22,6 @@ public interface UserMapper {
     List<User> selectAllUser();
 
 	List<UserResponse> findUserByPage(@Param("start")Integer start,@Param("pageSize") Integer pageSize);
+
+	Integer getTotal();
 }

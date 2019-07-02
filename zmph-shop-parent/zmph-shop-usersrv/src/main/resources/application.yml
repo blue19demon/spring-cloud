@@ -6,9 +6,9 @@ spring:
     name: zmph-shop-usersrv
   datasource:
      name: test
-     url: jdbc:mysql://127.0.0.1:3306/wechat?useUnicode=true&characterEncoding=utf8
+     url: jdbc:mysql://127.0.0.1:3306/zmph?useUnicode=true&characterEncoding=utf8
      username: root
-     password: 123456
+     password: root
      driver-class-name: com.mysql.jdbc.Driver
 eureka: 
   client:

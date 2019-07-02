@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: zmph-config-client
+  cloud:
+    config:
+      enabled: true
+      fail-fast: true
+      profile: ${spring.profiles.active}
+      name: ${spring.application.name},database,mq,zookeeper
+      uri: http://localhost:7001/
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/ 
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+          
+server:
+  port: 7002

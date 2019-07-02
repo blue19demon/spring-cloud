@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
+import org.zmph.shop.api.common.PageResult;
 import org.zmph.shop.api.response.UserResponse;
 import org.zmph.shop.api.ws.UserWSFeign;
 import org.zmph.shop.usersrv.bean.User;
@@ -20,9 +21,12 @@ public class UserController implements UserWSFeign{
 		return userMapper.deleteByPrimaryKey(id);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<UserResponse> findUserByPage(Integer pageNow, Integer pageSize) {
-		return userMapper.findUserByPage(pageNow, pageSize);
+	public PageResult<UserResponse> findUserByPage(Integer pageNow, Integer pageSize) {
+		List<UserResponse> data = userMapper.findUserByPage(pageNow, pageSize);
+		Integer total = userMapper.getTotal();
+		return (PageResult<UserResponse>) PageResult.builder().data(data).pageNow(pageNow).pageSize(pageSize).total(total).build();
 	}
 
 	@Override

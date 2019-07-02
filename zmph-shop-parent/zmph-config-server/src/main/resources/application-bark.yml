@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/blue19demon/spring-cloud
+          username: blue19demon
+          password: 18076575691abcd
+          search-paths: /**
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+server:
+  port: 7001
+  
