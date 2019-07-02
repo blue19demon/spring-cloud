@@ -6,16 +6,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.zmph.shop.api.common.PageResult;
+import org.zmph.shop.api.response.ProductResponse;
 import org.zmph.shop.api.response.UserResponse;
+import org.zmph.shop.api.ws.ProductWSFeign;
 import org.zmph.shop.api.ws.UserWSFeign;
 
 @RestController
 @RequestMapping("/web")
-public class UserController {
+public class TestController {
 
 	@Autowired
 	private UserWSFeign userWSFeign;
+	@Autowired
+	private ProductWSFeign productWSFeign;
 
+	@RequestMapping(value = "/product/get", method = RequestMethod.GET)
+	public ProductResponse get(@RequestParam(value = "id") Integer id) {
+		return productWSFeign.get(id);
+	}
+	
 	@RequestMapping(value = "/user/delete", method = RequestMethod.GET)
 	public int deleteUser(Integer id) {
 		return userWSFeign.deleteUser(id);

@@ -70,5 +70,6 @@
 		<module>zmph-shop-web</module>
 		<module>zmph-config-server</module>
 		<module>zmph-config-client</module>
+		<module>zmph-shop-productsrv</module>
 	</modules>
 </project>

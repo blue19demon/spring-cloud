@@ -1,0 +1,20 @@
+server:
+  port: 7766
+  
+spring: 
+  application: 
+    name: zmph-shop-productsrv
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/zmph?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+eureka: 
+  client:
+    serviceUrl: 
+      defaultZone: http://localhost:8888/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddr}:${server.port}   
+
