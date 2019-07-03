@@ -5,13 +5,16 @@ spring:
     name: zmph-config-client
   cloud:
     config:
-      service-id: zmph-config-server
-      enabled: true
-      fail-fast: true
       profile: ${spring.profiles.active}
       name: ${spring.application.name},database,mq,zookeeper
       uri: http://localhost:7001/
-      
+      discovery:
+        enabled: true
+        service-id: zmph-config-server
+    #      自动刷新
+    bus:
+      refresh:
+        enabled: true
 eureka:
   client:
     serviceUrl:
@@ -22,9 +25,14 @@ eureka:
           
 server:
   port: 7002
-  
-rabbitmq:
+
+#本地环境无需配置，只需启动mq
+rabbitmq: 
   host: localhost
   port: 5672
-  username: mqtest
-  password: 123456
+  username: guest
+  password: guest
+  
+security:                                #
+  basic:
+    enabled: false
