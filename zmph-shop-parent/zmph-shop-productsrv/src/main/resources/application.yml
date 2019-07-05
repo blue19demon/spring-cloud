@@ -18,3 +18,9 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ipAddr}:${server.port}   
 
+#消息队列
+rabbitmq: 
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest

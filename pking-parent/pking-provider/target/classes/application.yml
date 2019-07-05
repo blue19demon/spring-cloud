@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: pking-provider
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        register: true
+        enabled: true
+        instance-id: 1
+        root: /shenniu
+server:
+  port: 6062
