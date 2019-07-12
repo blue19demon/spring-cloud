@@ -1,0 +1,410 @@
+11:16:18.281 default [main] INFO  com.elk.BootELKApplication - Starting BootELKApplication on USER-20161118UC with PID 9744 (E:\GitHub\spring-cloud\boot-elk\target\classes started by Administrator in E:\GitHub\spring-cloud\boot-elk)
+11:16:18.311 default [main] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	compression.type = none
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	bootstrap.servers = [127.0.0.1:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	buffer.memory = 33554432
+	timeout.ms = 30000
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	block.on.buffer.full = false
+	ssl.key.password = null
+	max.block.ms = 60000
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	max.in.flight.requests.per.connection = 5
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	ssl.protocol = TLS
+	request.timeout.ms = 30000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	acks = 1
+	batch.size = 16384
+	ssl.keystore.location = null
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	retries = 0
+	max.request.size = 1048576
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	linger.ms = 0
+
+11:16:18.411 default [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version : 0.9.0.0
+11:16:18.411 default [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId : fc7243c2af4b2b4a
+11:16:18.491 default [main] INFO  com.elk.BootELKApplication - No active profile set, falling back to default profiles: default
+11:16:18.511 default [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55b699ef: startup date [Mon Jul 08 11:16:18 CST 2019]; root of context hierarchy
+11:16:19.917 default [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+11:16:20.268 default [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:16:20.268 default [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.40
+11:16:21.047 default [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:16:21.047 default [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2536 ms
+11:16:21.158 default [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+11:16:21.158 default [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+11:16:21.158 default [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:16:21.158 default [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:16:21.158 default [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+11:16:21.538 default [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55b699ef: startup date [Mon Jul 08 11:16:18 CST 2019]; root of context hierarchy
+11:16:21.568 default [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/index],methods=[GET]}" onto public java.lang.Object com.elk.IndexController.index()
+11:16:21.568 default [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/regist],methods=[GET]}" onto public java.lang.Object com.elk.IndexController.regist(com.elk.RequestData)
+11:16:21.578 default [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11:16:21.578 default [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11:16:21.598 default [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:16:21.598 default [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:16:21.628 default [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:16:21.698 default [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+11:16:22.088 default [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+11:16:22.098 default [main] INFO  com.elk.BootELKApplication - Started BootELKApplication in 4.186 seconds (JVM running for 4.544)
+11:16:43.562 default [http-nio-8080-exec-1] INFO  o.a.tomcat.util.http.parser.Cookie - A cookie header was received [1562031538,1562117177,1562320426] that contained an invalid cookie. That cookie will be ignored.Note: further occurrences of this error will be logged at DEBUG level.
+11:16:43.570 default [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+11:16:43.571 default [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+11:16:43.590 default [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+11:16:43.605 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info0
+11:16:43.606 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn0
+11:16:43.606 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error0
+11:16:43.607 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info1
+11:16:43.607 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn1
+11:16:43.608 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error1
+11:16:43.609 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info2
+11:16:43.610 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn2
+11:16:43.610 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error2
+11:16:43.610 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info3
+11:16:43.611 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn3
+11:16:43.612 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error3
+11:16:43.615 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info4
+11:16:43.615 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn4
+11:16:43.616 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error4
+11:16:43.616 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info5
+11:16:43.617 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn5
+11:16:43.617 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error5
+11:16:43.618 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info6
+11:16:43.620 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn6
+11:16:43.621 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error6
+11:16:43.622 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info7
+11:16:43.622 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn7
+11:16:43.623 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error7
+11:16:43.623 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info8
+11:16:43.623 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn8
+11:16:43.624 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error8
+11:16:43.624 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info9
+11:16:43.625 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn9
+11:16:43.625 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error9
+11:16:43.625 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info10
+11:16:43.626 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn10
+11:16:43.626 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error10
+11:16:43.626 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info11
+11:16:43.627 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn11
+11:16:43.627 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error11
+11:16:43.627 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info12
+11:16:43.629 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn12
+11:16:43.630 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error12
+11:16:43.630 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info13
+11:16:43.630 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn13
+11:16:43.630 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error13
+11:16:43.631 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info14
+11:16:43.631 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn14
+11:16:43.631 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error14
+11:16:43.632 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info15
+11:16:43.632 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn15
+11:16:43.632 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error15
+11:16:43.632 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info16
+11:16:43.633 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn16
+11:16:43.633 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error16
+11:16:43.634 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info17
+11:16:43.635 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn17
+11:16:43.636 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error17
+11:16:43.636 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info18
+11:16:43.636 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn18
+11:16:43.636 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error18
+11:16:43.637 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info19
+11:16:43.637 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn19
+11:16:43.637 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error19
+11:16:43.637 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info20
+11:16:43.638 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn20
+11:16:43.638 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error20
+11:16:43.638 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info21
+11:16:43.639 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn21
+11:16:43.639 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error21
+11:16:43.639 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info22
+11:16:43.640 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn22
+11:16:43.642 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error22
+11:16:43.642 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info23
+11:16:43.643 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn23
+11:16:43.643 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error23
+11:16:43.643 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info24
+11:16:43.643 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn24
+11:16:43.644 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error24
+11:16:43.644 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info25
+11:16:43.645 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn25
+11:16:43.645 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error25
+11:16:43.646 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info26
+11:16:43.646 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn26
+11:16:43.647 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error26
+11:16:43.647 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info27
+11:16:43.647 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn27
+11:16:43.648 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error27
+11:16:43.648 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info28
+11:16:43.648 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn28
+11:16:43.648 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error28
+11:16:43.648 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info29
+11:16:43.649 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn29
+11:16:43.649 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error29
+11:16:43.649 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info30
+11:16:43.649 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn30
+11:16:43.650 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error30
+11:16:43.650 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info31
+11:16:43.650 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn31
+11:16:43.650 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error31
+11:16:43.651 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info32
+11:16:43.652 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn32
+11:16:43.652 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error32
+11:16:43.652 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info33
+11:16:43.653 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn33
+11:16:43.654 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error33
+11:16:43.655 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info34
+11:16:43.656 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn34
+11:16:43.657 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error34
+11:16:43.657 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info35
+11:16:43.657 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn35
+11:16:43.658 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error35
+11:16:43.658 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info36
+11:16:43.658 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn36
+11:16:43.658 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error36
+11:16:43.659 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info37
+11:16:43.659 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn37
+11:16:43.659 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error37
+11:16:43.659 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info38
+11:16:43.660 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn38
+11:16:43.661 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error38
+11:16:43.661 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info39
+11:16:43.661 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn39
+11:16:43.661 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error39
+11:16:43.662 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info40
+11:16:43.663 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn40
+11:16:43.664 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error40
+11:16:43.664 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info41
+11:16:43.664 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn41
+11:16:43.665 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error41
+11:16:43.665 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info42
+11:16:43.665 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn42
+11:16:43.666 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error42
+11:16:43.666 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info43
+11:16:43.667 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn43
+11:16:43.667 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error43
+11:16:43.667 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info44
+11:16:43.668 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn44
+11:16:43.668 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error44
+11:16:43.669 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info45
+11:16:43.669 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn45
+11:16:43.669 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error45
+11:16:43.670 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info46
+11:16:43.670 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn46
+11:16:43.670 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error46
+11:16:43.671 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info47
+11:16:43.671 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn47
+11:16:43.673 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error47
+11:16:43.673 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info48
+11:16:43.674 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn48
+11:16:43.674 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error48
+11:16:43.674 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info49
+11:16:43.674 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn49
+11:16:43.674 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error49
+11:16:43.675 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info50
+11:16:43.675 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn50
+11:16:43.675 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error50
+11:16:43.675 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info51
+11:16:43.675 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn51
+11:16:43.676 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error51
+11:16:43.676 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info52
+11:16:43.676 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn52
+11:16:43.676 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error52
+11:16:43.682 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info53
+11:16:43.683 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn53
+11:16:43.683 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error53
+11:16:43.683 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info54
+11:16:43.684 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn54
+11:16:43.685 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error54
+11:16:43.685 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info55
+11:16:43.685 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn55
+11:16:43.685 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error55
+11:16:43.686 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info56
+11:16:43.686 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn56
+11:16:43.686 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error56
+11:16:43.686 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info57
+11:16:43.686 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn57
+11:16:43.687 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error57
+11:16:43.687 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info58
+11:16:43.687 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn58
+11:16:43.687 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error58
+11:16:43.687 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info59
+11:16:43.688 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn59
+11:16:43.696 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error59
+11:16:43.696 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info60
+11:16:43.696 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn60
+11:16:43.696 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error60
+11:16:43.697 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info61
+11:16:43.697 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn61
+11:16:43.697 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error61
+11:16:43.697 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info62
+11:16:43.697 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn62
+11:16:43.697 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error62
+11:16:43.698 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info63
+11:16:43.698 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn63
+11:16:43.698 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error63
+11:16:43.699 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info64
+11:16:43.699 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn64
+11:16:43.699 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error64
+11:16:43.704 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info65
+11:16:43.704 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn65
+11:16:43.704 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error65
+11:16:43.705 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info66
+11:16:43.705 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn66
+11:16:43.705 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error66
+11:16:43.705 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info67
+11:16:43.705 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn67
+11:16:43.706 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error67
+11:16:43.706 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info68
+11:16:43.706 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn68
+11:16:43.706 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error68
+11:16:43.707 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info69
+11:16:43.707 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn69
+11:16:43.707 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error69
+11:16:43.707 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info70
+11:16:43.708 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn70
+11:16:43.709 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error70
+11:16:43.709 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info71
+11:16:43.709 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn71
+11:16:43.709 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error71
+11:16:43.710 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info72
+11:16:43.710 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn72
+11:16:43.710 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error72
+11:16:43.710 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info73
+11:16:43.711 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn73
+11:16:43.711 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error73
+11:16:43.711 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info74
+11:16:43.711 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn74
+11:16:43.711 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error74
+11:16:43.712 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info75
+11:16:43.712 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn75
+11:16:43.719 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error75
+11:16:43.721 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info76
+11:16:43.723 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn76
+11:16:43.723 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error76
+11:16:43.723 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info77
+11:16:43.723 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn77
+11:16:43.724 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error77
+11:16:43.724 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info78
+11:16:43.724 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn78
+11:16:43.724 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error78
+11:16:43.724 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info79
+11:16:43.725 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn79
+11:16:43.725 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error79
+11:16:43.725 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info80
+11:16:43.725 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn80
+11:16:43.725 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error80
+11:16:43.726 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info81
+11:16:43.732 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn81
+11:16:43.732 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error81
+11:16:43.732 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info82
+11:16:43.734 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn82
+11:16:43.735 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error82
+11:16:43.735 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info83
+11:16:43.735 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn83
+11:16:43.736 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error83
+11:16:43.739 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info84
+11:16:43.739 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn84
+11:16:43.739 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error84
+11:16:43.740 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info85
+11:16:43.741 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn85
+11:16:43.741 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error85
+11:16:43.741 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info86
+11:16:43.741 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn86
+11:16:43.741 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error86
+11:16:43.742 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info87
+11:16:43.742 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn87
+11:16:43.742 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error87
+11:16:43.742 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info88
+11:16:43.742 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn88
+11:16:43.743 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error88
+11:16:43.743 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info89
+11:16:43.743 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn89
+11:16:43.743 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error89
+11:16:43.743 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info90
+11:16:43.743 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn90
+11:16:43.751 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error90
+11:16:43.752 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info91
+11:16:43.752 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn91
+11:16:43.752 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error91
+11:16:43.752 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info92
+11:16:43.752 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn92
+11:16:43.753 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error92
+11:16:43.753 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info93
+11:16:43.753 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn93
+11:16:43.753 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error93
+11:16:43.753 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info94
+11:16:43.753 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn94
+11:16:43.754 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error94
+11:16:43.754 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info95
+11:16:43.754 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn95
+11:16:43.754 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error95
+11:16:43.754 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info96
+11:16:43.755 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn96
+11:16:43.755 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error96
+11:16:43.755 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info97
+11:16:43.755 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn97
+11:16:43.755 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error97
+11:16:43.755 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info98
+11:16:43.756 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn98
+11:16:43.771 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error98
+11:16:43.771 default [http-nio-8080-exec-1] INFO  com.elk.IndexController - info99
+11:16:43.772 default [http-nio-8080-exec-1] WARN  com.elk.IndexController - warn99
+11:16:43.772 default [http-nio-8080-exec-1] ERROR com.elk.IndexController - error99
+11:19:45.582 default [http-nio-8080-exec-4] INFO  com.elk.IndexController - 用户注册，请求参数:{
+	"mobile":"18076575692",
+	"name":"王元武"
+}
+11:19:45.585 default [http-nio-8080-exec-4] INFO  com.elk.UserService - ELK项目，用户->{
+	"mobile":"18076575692",
+	"name":"王元武",
+	"no":"32cc6f151fcc473caebae2c4de48c474"
+},保存成功！
+11:19:45.586 default [http-nio-8080-exec-4] INFO  com.elk.IndexController - save返回:{
+	"mobile":"18076575692",
+	"name":"王元武",
+	"no":"32cc6f151fcc473caebae2c4de48c474"
+}
+11:50:36.883 default [http-nio-8080-exec-8] INFO  com.elk.IndexController - 用户注册，请求参数:{
+	"mobile":"1807656363636",
+	"name":"沾上干"
+}
+11:50:37.072 default [http-nio-8080-exec-8] INFO  com.elk.UserService - ELK项目，用户->{
+	"mobile":"1807656363636",
+	"name":"沾上干",
+	"no":"0eb1efe8ff1b4c2e9bfd8f5da6fc727c"
+},保存成功！
+11:50:37.074 default [http-nio-8080-exec-8] INFO  com.elk.IndexController - save返回:{
+	"mobile":"1807656363636",
+	"name":"沾上干",
+	"no":"0eb1efe8ff1b4c2e9bfd8f5da6fc727c"
+}
+12:32:04.605 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+12:32:04.605 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@55b699ef: startup date [Mon Jul 08 11:16:18 CST 2019]; root of context hierarchy
+12:32:04.605 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
