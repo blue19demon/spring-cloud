@@ -10,6 +10,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>zmph-shop-api</artifactId>
+	<packaging>jar</packaging>
 	<name>zmph-shop-api</name>
 	<url>http://maven.apache.org</url>
 	<properties>

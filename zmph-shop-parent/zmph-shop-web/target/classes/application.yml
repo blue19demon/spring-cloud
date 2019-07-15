@@ -1,12 +1,5 @@
-server:
-  port: 8081
-spring: 
-  application: 
+spring:
+  profiles:
+    active: '@spring.profiles.active@'
+  application:
     name: zmph-shop-web
-eureka: 
-  client:
-    serviceUrl: 
-      defaultZone: http://localhost:8888/eureka/
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ipAddr}:${server.port}

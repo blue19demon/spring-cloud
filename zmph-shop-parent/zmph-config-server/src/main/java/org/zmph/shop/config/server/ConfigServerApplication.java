@@ -10,6 +10,13 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableConfigServer
 @EnableEurekaClient
 @EnableDiscoveryClient
+/**
+ * 配置刷新
+ * post请求config客户端的/refresh端点
+http://127.0.0.1:7200/actuator/bus-refresh
+ * @author Administrator
+ *
+ */
 public class ConfigServerApplication {
 
     public static void main(String[] args) {

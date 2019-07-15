@@ -3,6 +3,8 @@ package org.zmph.shop.api.response;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class ProductResponse implements Serializable{
 	/**
 	 * 
@@ -11,7 +13,7 @@ public class ProductResponse implements Serializable{
 	private Integer id;
 	
     private String name;
-    
+    @JsonFormat( pattern="yyyy-MM-dd HH:mm:ss")
     private Date date;
 
 	public Integer getId() {

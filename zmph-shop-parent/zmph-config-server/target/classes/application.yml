@@ -1,29 +1,51 @@
 server:
-  port: 7001
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8888/eureka/ 
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-    
+  port: 7200
+  
 spring:
+  profiles: 
+    active: subversion
+  application: 
+    name: zmph-config-server
+  #jackson相关配置
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    #时区必须要设置
+    time-zone: GMT+8
+    #ALWAYS的意思是即时属性为null，仍然也会输出这个key
+    default-property-inclusion: ALWAYS
+    serialization:
+      indent-output: true
   cloud:
     config:
-      server: 
-        native:
-          search-locations: file:E:/GitHub/spring-cloud/zmph-shop-parent/properties # classpath:properties/搜索src/main/resource 下的properties文件夹下的文件
-    #自动刷新
+      enabled: true
+      server:
+        svn:
+          uri: https://user-20161118uc/svn/jenkinsRepositories/springcCoud/zmph-shop-parent/app-global-config-svn
+          username: huangjian
+          password: 123456
+        #git:
+        #  uri: https://github.com/pcf-guides/configuration-server-config-repo
+        default-label: config-repo
+      #自动刷新
     bus:
       refresh:
         enabled: true
-  application:
-    name: zmph-config-server
-  profiles:
-    active: native  # 配置使用本地储存
-    
+
+#进行暴露服务
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka/ 
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
 #本地环境无需配置，只需启动mq
 rabbitmq: 
   host: localhost
@@ -31,9 +53,22 @@ rabbitmq:
   username: guest
   password: guest
  
-#进行暴露服务
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+logging:
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.cloud.config.server: DEBUG
+    
+# 描述信息
+info:
+  blog-url: http://blog.battcn.com
+  author: Levin
+  version: '0.0.1-SNAPSHOT'
+  env: '@spring.profiles.active@'
+  app:
+    name: ${spring.application.name}-${server.port}
+  company:
+    name: www.cloud.com
+  build:
+    artifactId: $project.artifactId$
+    version: $project.version$
+

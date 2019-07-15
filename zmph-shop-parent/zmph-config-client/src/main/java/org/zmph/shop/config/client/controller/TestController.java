@@ -1,7 +1,7 @@
 package org.zmph.shop.config.client.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.zmph.shop.config.client.platform.JdbcFile;
@@ -11,6 +11,7 @@ import org.zmph.shop.config.client.platform.ZKConfig;
 import com.alibaba.fastjson.JSON;
 
 @RestController
+@RefreshScope
 public class TestController {
 	
 	@Autowired
@@ -22,6 +23,7 @@ public class TestController {
 	@Autowired
 	private ZKConfig ZKConfig;
 	
+	
 	@RequestMapping("/config")
 	public String config() {
 		return "DBConfig:<br>"+JSON.toJSONString(jdbcConfig,true)
@@ -30,8 +32,5 @@ public class TestController {
 				.concat("<br>")
 				.concat("ZKConfig:<br>"+JSON.toJSONString(ZKConfig,true));
 	}
-	@GetMapping("conf/jdbc")
-	public JdbcFile jdbc() {
-		return jdbcConfig;
-	}
+	
 }
