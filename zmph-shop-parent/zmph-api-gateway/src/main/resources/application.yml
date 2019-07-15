@@ -1,9 +1,14 @@
+server:
+  port: 7900
+  
 spring:
+  application: 
+    name: zmph-api-gateway
   profiles:
     active: dev
-  application: 
-    name: zmph-shop-usersrv
-#jackson相关配置
+  main:
+    allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
+  #jackson相关配置
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     #时区必须要设置
@@ -13,23 +18,21 @@ spring:
     serialization:
       indent-output: true
 
-#mybatis config
-mybatis:
-  typeAliasesPackage: org.zmph.shop.usersrv.bean
-  mapperLocations: classpath:mappers/*.xml
-
-#pagehelper分页插件
-pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql
+logging:
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.cloud.config.server: DEBUG
+    
+zuul:
+  routes:
+    zmph-shop-usersrv: /api-user-prefix/**
+    zmph-shop-productsrv: /api-product-prefix/**
     
 # 描述信息
 info:
   blog-url: http://blog.battcn.com
   author: Levin
-  version: '0.0.1-SNAPSHOT'
+  version: '@project.version@'
   env: '@spring.profiles.active@'
   app:
     name: ${spring.application.name}-${server.port}

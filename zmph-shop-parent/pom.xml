@@ -66,5 +66,6 @@
 		<module>zmph-config-server</module>
 		<module>zmph-config-client</module>
 		<module>zmph-shop-productsrv</module>
+		<module>zmph-api-gateway</module>
 	</modules>
 </project>
