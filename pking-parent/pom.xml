@@ -52,5 +52,6 @@
   	<module>pking-client</module>
   	<module>pking-api</module>
   	<module>pking-provider</module>
+  	<module>pking-provider02</module>
   </modules>
 </project>
