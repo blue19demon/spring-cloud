@@ -73,6 +73,22 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+
+		<!-- fastdfs -->
+		<!-- https://mvnrepository.com/artifact/net.oschina.zcx7878/fastdfs-client-java -->
+		<dependency>
+			<groupId>net.oschina.zcx7878</groupId>
+			<artifactId>fastdfs-client-java</artifactId>
+			<version>1.27.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
@@ -84,33 +100,15 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<!--docker maven 插件 -->
-			<!-- <plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<version>1.0.0</version>
-				 docker镜像相关的配置信息
-                <configuration>
-                    <dockerHost>http://192.168.28.128:2375</dockerHost>
-                    <pushImage>false</pushImage>
-                    <imageName>${project.build.finalName}</imageName>
-                    <baseImage>java:8</baseImage>
-                    <entryPoint>["java", "-jar","-Djava.security.egd=file:/dev/./urandom", "/${project.build.finalName}.jar"]</entryPoint>
-                    TAG
-                    <imageTags>
-                        <imageTag>lastest</imageTag>
-                    </imageTags>
-                     覆盖已存在的标签 镜像
-                    <forceTags>true</forceTags>
-                    构建镜像的配置信息
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
-                </configuration>
-			</plugin> -->
+			<!-- <plugin> <groupId>com.spotify</groupId> <artifactId>docker-maven-plugin</artifactId> 
+				<version>1.0.0</version> docker镜像相关的配置信息 <configuration> <dockerHost>http://192.168.28.128:2375</dockerHost> 
+				<pushImage>false</pushImage> <imageName>${project.build.finalName}</imageName> 
+				<baseImage>java:8</baseImage> <entryPoint>["java", "-jar","-Djava.security.egd=file:/dev/./urandom", 
+				"/${project.build.finalName}.jar"]</entryPoint> TAG <imageTags> <imageTag>lastest</imageTag> 
+				</imageTags> 覆盖已存在的标签 镜像 <forceTags>true</forceTags> 构建镜像的配置信息 <resources> 
+				<resource> <targetPath>/</targetPath> <directory>${project.build.directory}</directory> 
+				<include>${project.build.finalName}.jar</include> </resource> </resources> 
+				</configuration> </plugin> -->
 		</plugins>
 	</build>
 </project>
