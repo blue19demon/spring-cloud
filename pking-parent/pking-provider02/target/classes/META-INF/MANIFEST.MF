@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: pking-provider02
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: com.pking
+Build-Jdk: 1.8.0_77
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/pking-parent/pking-provider02
+Created-By: Maven Integration for Eclipse
+

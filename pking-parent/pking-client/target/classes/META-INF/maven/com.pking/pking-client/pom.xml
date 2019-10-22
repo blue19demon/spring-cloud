@@ -38,5 +38,49 @@
 			<artifactId>pking-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
+	<build>
+	    <!-- 打包后的名字 -->
+	    <finalName>pking-client</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!--docker maven 插件 -->
+			<!-- <plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				 docker镜像相关的配置信息
+                <configuration>
+                   <dockerHost>http://192.168.28.128:2375</dockerHost>
+                    <pushImage>false</pushImage>
+                    <imageName>${project.build.finalName}</imageName>
+                    <baseImage>java:8</baseImage>
+                    <entryPoint>["java", "-jar","-Djava.security.egd=file:/dev/./urandom", "/${project.build.finalName}.jar"]</entryPoint>
+                    TAG
+                    <imageTags>
+                        <imageTag>lastest</imageTag>
+                    </imageTags>
+                     覆盖已存在的标签 镜像
+                    <forceTags>true</forceTags>
+                    构建镜像的配置信息
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+			</plugin> -->
+		</plugins>
+	</build>
 </project>

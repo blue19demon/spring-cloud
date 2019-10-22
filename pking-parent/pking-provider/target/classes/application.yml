@@ -1,13 +1,48 @@
 spring:
   application:
     name: pking-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/testdb?useSSL=false
+    username: root
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    filters: stat,wall,log4j
+    initialSize: 2
+    maxActive: 3
+    maxPoolPreparedStatementPerConnectionSize: 20
+    maxWait: 6000
+    minEvictableIdleTimeMillis: 300000
+    minIdle: 2
+    poolPreparedStatements: true
+    testOnBorrow: false
+    testOnReturn: false
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    type: com.alibaba.druid.pool.DruidDataSource
+    validationQuery: SELECT 1 FROM DUAL
+  
+  redis:
+    database: 0
+    host: 127.0.0.1
+    password: ''
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+    port: 6379
+    timeout: 5000
+    
   cloud:
     zookeeper:
-      connect-string: localhost:2181
+      connect-string: 127.0.0.1:2181
       discovery:
         register: true
         enabled: true
         instance-id: 1
         root: /shenniu
+        instance-host: 127.0.0.1
 server:
   port: 6062

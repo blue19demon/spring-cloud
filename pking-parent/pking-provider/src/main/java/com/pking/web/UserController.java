@@ -1,33 +1,31 @@
 package com.pking.web;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pking.entity.MoUser;
 import com.pking.feigns.IUserService;
+import com.pking.service.UserService;
 
 @RestController
-public class UserController implements IUserService{
+public class UserController implements IUserService {
+	@Autowired
+	private UserService userService;
 
-    @Value("${server.port}")
-    private int port;
+	@Override
+	public List<MoUser> getListFromDB() {
+		return userService.getListFromDB();
+	}
 
-    @Override
-    public List<MoUser> getList() {
+	@Override
+	public String set2Redis(String key, String value) {
+		return userService.set2Redis(key, value);
+	}
 
-        return new ArrayList<MoUser>() {
-            /**
-			 * 
-			 */
-			private static final long serialVersionUID = 1L;
-			{
-                add(new MoUser(1, "shenniu001_" + port));
-                add(new MoUser(2, "shenniu002_" + port));
-                add(new MoUser(3, "shenniu003_" + port));
-            }
-        };
-    }
+	@Override
+	public String getFromRedis(String key) {
+		return userService.getFromRedis(key);
+	}
 }

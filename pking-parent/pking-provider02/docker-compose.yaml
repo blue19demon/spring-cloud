@@ -1,0 +1,10 @@
+version : '2'
+services:
+  pking-provider:
+      container_name: pking-provider02
+      build:
+        context: .
+        dockerfile: Dockerfile
+      ports:
+        - "6063:6063"
+ 

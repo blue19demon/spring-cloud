@@ -1,0 +1,4 @@
+com\pking\entity\MoUser$MoUserBuilder.class
+com\pking\entity\MoUser.class
+com\pking\feigns\IUserService.class
+com\pking\feigns\IUserService02.class

@@ -1,0 +1,9 @@
+version : '2'
+services:
+  pking-client:
+      container_name: pking-client
+      build:
+        context: .
+        dockerfile: Dockerfile
+      ports:
+        - "9999:9999"
